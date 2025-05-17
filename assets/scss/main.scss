@@ -1,5 +1,5 @@
-// Override Bootstrap variables
-$primary: #0056b3; // Engineering blue
+// Custom variables must come before Bootstrap imports
+$primary: #0056b3;
 $secondary: #6c757d;
 $light: #f8f9fa;
 $dark: #212529;
@@ -8,10 +8,18 @@ $font-family-sans-serif: 'Roboto', sans-serif;
 $headings-font-family: 'Montserrat', sans-serif;
 $headings-font-weight: 700;
 
-// Import Bootstrap
-@import "../node_modules/bootstrap/scss/bootstrap";
+// Modern @use syntax
+@use "bootstrap/scss/bootstrap" with (
+  $primary: $primary,
+  $secondary: $secondary,
+  $light: $light,
+  $dark: $dark,
+  $font-family-sans-serif: $font-family-sans-serif,
+  $headings-font-family: $headings-font-family,
+  $headings-font-weight: $headings-font-weight
+);
 
-// Custom styles
+// Custom styles below
 .hero-section {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
               url('../img/hero-bg.jpg');
