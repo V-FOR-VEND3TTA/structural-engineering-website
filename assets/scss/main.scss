@@ -1,0 +1,37 @@
+// Override Bootstrap variables
+$primary: #0056b3; // Engineering blue
+$secondary: #6c757d;
+$light: #f8f9fa;
+$dark: #212529;
+
+$font-family-sans-serif: 'Roboto', sans-serif;
+$headings-font-family: 'Montserrat', sans-serif;
+$headings-font-weight: 700;
+
+// Import Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Custom styles
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('../img/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 80vh;
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  color: $primary;
+}
+
+.project-card {
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.engineering-feature {
+  border-left: 4px solid $primary;
+}
