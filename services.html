@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services | Structural Solutions</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!--Custom CSS-->
     <link rel="stylesheet" href="assets/css/custom.css">
     <!--Google Fonts-->
@@ -24,7 +26,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -32,14 +34,9 @@
             </div>
         </div>
     </nav>
+
     <!-- Page Header -->
-    <section class="py-5" style="
-  background: 
-    linear-gradient(rgba(70, 153, 241, 0.8), rgba(0, 86, 179, 0.8)),
-    url('assets/img/hero-bg.jpg') center/cover no-repeat;
-  color: white;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-">
+    <section class="py-5 service-header">
         <div class="container py-4">
             <div class="row">
                 <div class="col-lg-10 mx-auto text-center">
@@ -50,109 +47,196 @@
         </div>
     </section>
 
-  <!-- Services List -->
-  <section class="py-5" id="design">
-    <div class="container py-4">
-      <div class="row g-5">
-        <div class="col-lg-4">
-          <div class="sticky-top pt-5" style="top: 20px;">
-            <div class="list-group">
-              <a href="#design" class="list-group-item list-group-item-action active">Structural Design</a>
-              <a href="#analysis" class="list-group-item list-group-item-action">Structural Analysis</a>
-              <a href="#inspection" class="list-group-item list-group-item-action">Structural Inspection</a>
-              <!-- Add more service links -->
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-8">
-          <div class="mb-5 pb-4 border-bottom">
-            <div class="d-flex align-items-center mb-4">
-              <div class="bg-primary text-white rounded-2 p-3 me-4">
-                <i class="fas fa-building fa-2x"></i>
-              </div>
-              <h2 class="fw-bold mb-0">Structural Design</h2>
-            </div>
-            <p class="lead">Our structural design services create safe, efficient, and cost-effective solutions for all types of structures.</p>
-            <h4 class="fw-bold mt-4">Our Design Capabilities</h4>
-            <ul class="list-unstyled">
-              <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Steel structure design</li>
-              <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Concrete structure design</li>
-              <!-- Should proably add more capabilities -->
-            </ul>
-            <div class="row mt-4 g-4">
-              <div class="col-md-6">
-                <div class="card border-0 shadow-sm h-100">
-                  <img src="assets/img/steel-structure.jpg" class="card-img-top" alt="Steel Design">
-                  <div class="card-body">
-                    <h5 class="fw-bold">Steel Structures</h5>
-                    <p>Optimized steel designs for commercial and industrial applications.</p>
-                  </div>
+    <!-- Services Tabs -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="nav nav-tabs" id="servicesTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="design-tab" data-bs-toggle="tab" data-bs-target="#design" type="button" role="tab">Structural Design</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="analysis-tab" data-bs-toggle="tab" data-bs-target="#analysis" type="button" role="tab">Structural Analysis</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="inspection-tab" data-bs-toggle="tab" data-bs-target="#inspection" type="button" role="tab">Structural Inspection</button>
+                        </li>
+                    </ul>
+                    
+                    <div class="tab-content py-4" id="servicesTabContent">
+                        <!-- Design Tab -->
+                        <div class="tab-pane fade show active" id="design" role="tabpanel">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="bg-primary text-white rounded-2 p-3 me-4">
+                                    <i class="fas fa-building fa-2x"></i>
+                                </div>
+                                <h2 class="fw-bold mb-0">Structural Design</h2>
+                            </div>
+                            <p class="lead">Our structural design services create safe, efficient, and cost-effective solutions for all types of structures.</p>
+                            <h4 class="fw-bold mt-4">Our Design Capabilities</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Steel structure design</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Concrete structure design</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Timber frame design</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Seismic-resistant design</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Foundation systems</li>
+                            </ul>
+                            <div class="row mt-4 g-4">
+                                <div class="col-md-6">
+                                    <div class="card border-0 shadow-sm h-100">
+                                        <img src="assets/img/steel-structure.jpg" class="card-img-top" alt="Steel Design">
+                                        <div class="card-body">
+                                            <h5 class="fw-bold">Steel Structures</h5>
+                                            <p>Optimized steel designs for commercial and industrial applications with advanced connection detailing.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card border-0 shadow-sm h-100">
+                                        <img src="assets/img/concrete-structure.jpg" class="card-img-top" alt="Concrete Design">
+                                        <div class="card-body">
+                                            <h5 class="fw-bold">Concrete Structures</h5>
+                                            <p>Innovative concrete solutions including post-tensioned systems and precast elements.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Analysis Tab -->
+                        <div class="tab-pane fade" id="analysis" role="tabpanel">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="bg-primary text-white rounded-2 p-3 me-4">
+                                    <i class="fas fa-calculator fa-2x"></i>
+                                </div>
+                                <h2 class="fw-bold mb-0">Structural Analysis</h2>
+                            </div>
+                            <p class="lead">Comprehensive analysis services to ensure structural integrity and performance under all loading conditions.</p>
+                            <h4 class="fw-bold mt-4">Analysis Services</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Finite element analysis</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Wind load analysis</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Seismic analysis</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Dynamic analysis</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Non-linear analysis</li>
+                            </ul>
+                            <div class="row mt-4 g-4">
+                                <div class="col-md-6">
+                                    <div class="card border-0 shadow-sm h-100">
+                                        <img src="assets/img/fem-analysis.jpg" class="card-img-top" alt="FEA Analysis">
+                                        <div class="card-body">
+                                            <h5 class="fw-bold">Finite Element Analysis</h5>
+                                            <p>Advanced FEA modeling for complex structural systems and connection details.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card border-0 shadow-sm h-100">
+                                        <img src="assets/img/seismic-analysis.jpg" class="card-img-top" alt="Seismic Analysis">
+                                        <div class="card-body">
+                                            <h5 class="fw-bold">Seismic Analysis</h5>
+                                            <p>Performance-based seismic evaluation using the latest code provisions.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Inspection Tab -->
+                        <div class="tab-pane fade" id="inspection" role="tabpanel">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="bg-primary text-white rounded-2 p-3 me-4">
+                                    <i class="fas fa-hard-hat fa-2x"></i>
+                                </div>
+                                <h2 class="fw-bold mb-0">Structural Inspection</h2>
+                            </div>
+                            <p class="lead">Professional inspection services to assess structural conditions and recommend appropriate repairs.</p>
+                            <h4 class="fw-bold mt-4">Inspection Services</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Condition assessments</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Forensic engineering</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Load testing</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Non-destructive testing</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Post-disaster evaluation</li>
+                            </ul>
+                            <div class="row mt-4 g-4">
+                                <div class="col-md-6">
+                                    <div class="card border-0 shadow-sm h-100">
+                                        <img src="assets/img/bridge-inspection.jpg" class="card-img-top" alt="Bridge Inspection">
+                                        <div class="card-body">
+                                            <h5 class="fw-bold">Bridge Inspections</h5>
+                                            <p>Comprehensive bridge inspections meeting DOT requirements and NBI standards.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card border-0 shadow-sm h-100">
+                                        <img src="assets/img/forensic-engineering.jpg" class="card-img-top" alt="Forensic Engineering">
+                                        <div class="card-body">
+                                            <h5 class="fw-bold">Forensic Engineering</h5>
+                                            <p>Expert investigation of structural failures and distress conditions.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <!-- Add another example card -->
             </div>
-          </div>
-          <!-- Add other service sections -->
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA Section -->
-  <section class="py-5 bg-primary text-white">
-    <div class="container py-4">
-      <div class="row align-items-center">
-        <div class="col-lg-8 mb-4 mb-lg-0">
-          <h3 class="fw-bold mb-3">Ready to discuss your project?</h3>
-          <p class="lead mb-0">Contact our team of structural engineering experts today.</p>
+    <!-- CTA Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container py-4">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <h3 class="fw-bold mb-3">Ready to discuss your project?</h3>
+                    <p class="lead mb-0">Contact our team of structural engineering experts today.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="contact.html" class="btn btn-light btn-lg px-4">Get in Touch</a>
+                </div>
+            </div>
         </div>
-        <div class="col-lg-4 text-lg-end">
-          <a href="contact.html" class="btn btn-light btn-lg px-4">Get in Touch</a>
+    </section>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Structural Solutions</h5>
+                    <p>Providing innovative structural engineering services since 1995.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="services.html" class="text-white">Services</a></li>
+                        <li><a href="projects.html" class="text-white">Projects</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <address>
+                        123 Engineering Way<br>
+                        New York, NY 10001<br>
+                        <i class="fas fa-phone"></i> (555) 123-4567<br>
+                        <i class="fas fa-envelope"></i> info@structuralsolutions.com
+                    </address>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p>&copy; 2025 Structural Solutions | All rights reserved.</p>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <footer class="bg-dark text-white py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 mb-4 mb-md-0">
-          <h5>Structural Solutions</h5>
-          <p>Providing innovative structural engineering services since 1995.</p>
-        </div>
-        <div class="col-md-4 mb-4 mb-md-0">
-          <h5>Quick Links</h5>
-          <ul class="list-unstyled">
-            <li><a href="services.html" class="text-white">Services</a></li>
-            <li><a href="projects.html" class="text-white">Projects</a></li>
-            <li><a href="contact.html" class="text-white">Contact</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h5>Contact</h5>
-          <address>
-            123 Engineering Way<br>
-            New York, NY 10001<br>
-            <i class="fas fa-phone"></i> (555) 123-4567<br>
-            <i class="fas fa-envelope"></i> info@structuralsolutions.com
-          </address>
-        </div>
-      </div>
-      <hr class="my-4 bg-light">
-      <div class="text-center">
-        <p>&copy; 2025 Structural Solutions | All rights reserved.</p>
-      </div>
-    </div>
-</footer> 
-<!--Custom Script-->
-<script src="assets/js/main.js"></script>    
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Custom Script-->
+    <script src="assets/js/main.js"></script>    
 </body>
 </html>
-
-<!--
-  {% extends "_includes/base.html" %}
-
-{% block title %}Our Services | Structural Solutions{% endblock %}
-  
-{% block content %}
-{% endblock %}
--->
